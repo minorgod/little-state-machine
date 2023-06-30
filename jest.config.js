@@ -1,15 +1,17 @@
 module.exports = {
+  testEnvironment: 'jsdom',
   roots: ['<rootDir>/src'],
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.tsx?$': ['ts-jest', {
+      tsConfig: 'tsconfig.jest.json',
+    }],
   },
   globals: {
-    'ts-jest': {
-      tsConfig: 'tsconfig.jest.json',
-    },
+
   },
   testMatch: ['**/?(*.)+(spec|test).ts?(x)'],
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-  setupFiles: ['<rootDir>/setup.[jt]s?(x)'],
+  //setupFiles: ['<rootDir>/test/setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test/setup.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js'],
 };
