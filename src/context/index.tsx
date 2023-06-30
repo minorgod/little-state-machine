@@ -1,4 +1,4 @@
-'use client';
+'use client'; // needed for Next 13 compatibility
 import * as React from 'react';
 import storeFactory from '../logic/storeFactory';
 import { StateMachineContextValue } from '../types';

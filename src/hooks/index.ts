@@ -1,5 +1,5 @@
 import {ActionsOutput, AnyActions, AnyCallback, GlobalState} from "../types";
-import {useStateMachineContext} from "../context/StateMachineContext";
+import {useStateMachineContext} from "../context";
 import * as React from "react";
 import storeFactory from "../logic/storeFactory";
 import {PERSIST_OPTION, STORE_ACTION_NAME} from "../constants";

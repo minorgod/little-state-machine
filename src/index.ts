@@ -1,6 +1,8 @@
-import { StateMachineProvider } from './context/StateMachineContext';
+import { StateMachineProvider } from './context';
 import { createStore } from './logic/createStore';
 import { useStateMachine } from './hooks';
-import { GlobalState } from './types';
+import { useStateMachineContext } from './context';
+export type { GlobalState } from './types';
 
-export { createStore, StateMachineProvider, useStateMachine, GlobalState };
+export { createStore, StateMachineProvider, useStateMachine, useStateMachineContext};
+
