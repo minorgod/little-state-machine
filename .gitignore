@@ -62,7 +62,7 @@ typings/
 .DS_Store
 
 /lib
-/dist
+#/dist
 .idea/
 /coverage
 .rpt2_cache
