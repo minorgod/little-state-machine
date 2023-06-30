@@ -1,8 +1,8 @@
 'use client';
 import * as React from 'react';
-import storeFactory from './logic/storeFactory';
-import { StateMachineContextValue } from './types';
-import { PERSIST_OPTION } from './constants';
+import storeFactory from '../logic/storeFactory';
+import { StateMachineContextValue } from '../types';
+import { PERSIST_OPTION } from '../constants';
 
 const StateMachineContext = React.createContext<StateMachineContextValue>(
   undefined as any,
