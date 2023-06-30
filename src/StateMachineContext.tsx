@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import storeFactory from './logic/storeFactory';
 import { StateMachineContextValue } from './types';
