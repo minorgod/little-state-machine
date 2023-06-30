@@ -3,15 +3,11 @@ import storeFactory from './logic/storeFactory';
 import { StateMachineContextValue } from './types';
 import { PERSIST_OPTION } from './constants';
 
-type PropsChildren = {
-  children?: React.ReactNode;
-};
-
 const StateMachineContext = React.createContext<StateMachineContextValue>(
   undefined as any,
 );
 
-export const StateMachineProvider: React.FC<PropsChildren> = ({ children }) => {
+export const StateMachineProvider = ({ children } : React.PropsWithChildren) => {
   const [state, setState] = React.useState(storeFactory.state);
 
   React.useEffect(() => {
